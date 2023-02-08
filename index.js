@@ -396,7 +396,7 @@ var corsOptions = {
  <tr>
   <td>Extractors</td>
   <td>Sinks</td>
-  <td>Washing Wachine</td>
+  <td>Washing Machine</td>
   <td>Dryer</td>
   <td>Wine Cooler</td>
 </tr>
