@@ -201,6 +201,10 @@ var corsOptions = {
     {if(req.body.parking === "Yes"){ req.body.duder1 = true}else{ req.body.duder1 = false}};
     {if(req.body.fittersrequired === "Yes"){ req.body.duder2 = true}else{ req.body.duder2 = false}};
     let fruits = [];
+    {if (req.body.buildersname.length < 1){req.body.buildersname1 = ''}else{req.body.buildersname1 = '<span><h3>Builders Name</h3></span>'}};
+    {if (req.body.buildersname.length < 1){req.body.buildersname2 = ''}else{req.body.buildersname2 = `<span>`+req.body.buildersname+`</span>`}};
+    {if (req.body.dontwantstatement.length < 1){req.body.dontwantstatement1 = ''}else{req.body.dontwantstatement1 = '<span><h3>Anything You Dont Want In Your Dream Kitchen.</h3></span>'}};
+    {if (req.body.dontwantstatement.length < 1){req.body.dontwantstatement2 = ''}else{req.body.dontwantstatement2 = `<span>`+req.body.dontwantstatement+`</span>`}};
     {if(req.body.fridges === "Fridge Required"){fruits.push("fridges")}};
     {if(req.body.freezers === "Freezer Required"){fruits.push("freezers")}};
     {if(req.body.ovens === "Oven Required"){fruits.push("ovens")}};
@@ -259,209 +263,306 @@ var corsOptions = {
       subject: emailSubject,
       //html: '<p>Message from <strong>' + fromName + ' (' + fromEmail + ')</strong></p><p>' + message + '</p>'
       html: `<center>
+      
+      
 
   
 
-      <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_logoBlock_1" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" width="570" class="vb-row">
-            
-            <tbody><tr>
-          <td align="center" valign="top" style="font-size: 0"><div style="vertical-align: top; width: 100%; max-width: 184px; -mru-width: 0px"><!--
-            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" width="184" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px">
-              
-              <tbody><tr><td width="100%" valign="top" align="center" class="links-color"><!--[if (lte ie 8)]><div style="display: inline-block; width: 166px; -mru-width: 0px"><![endif]--><img border="0" hspace="0" align="center" vspace="0" width="166" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #f3f3f3; font-size: 18px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 166px; height: auto;" src="https://mosaico.io/srv/f-4228j1i/img?src=https%3A%2F%2Fmosaico.io%2Ffiles%2F4228j1i%2Ficon-192.png&amp;method=resize&amp;params=166%2Cnull"><!--[if (lte ie 8)]></div><![endif]--></td></tr>
-            
-            </tbody></table></div></td>
-        </tr>
-          
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-          
-        </td></tr>
-        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_titleBlock_2" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="570" class="vb-row" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px">
-            
-            <tbody><tr>
-          <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
-            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
-              
-              <tbody><tr>
-          <td width="100%" valign="top" align="center" style="font-weight: normal; color: #3f3f3f; font-size: 22px; font-family: Arial, Helvetica, sans-serif; text-align: center"><span style="font-weight: normal">Your Quote Reminder</span></td>
-        </tr>
-            
-            </tbody></table></div></td>
-        </tr>
-          
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-        </td></tr>
-        </tbody></table>
-        <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
-            
-            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-top: 0px;">Dear `+req.body.fullname+`,</p>
-    <p style="margin: 1em 0px; margin-bottom: 0px;">We wanted to let you know we got your quote. Below is a list of all the options you asked for.</p></td></tr>
-
-    <tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal">
-    <p style="margin: 1em 0px; margin-bottom: 0px;">
-    <span><h3>Builders Name</h3></span>
-    <span>`+req.body.buildersname+`</span>
-    <span><h3>Parking</h3></span>
-    <span>`+req.body.parking+`</span>
-    <span><h3>Project Type</h3></span>
-    <span>`+req.body.projecttype+`</span>
-    <span><h3>Kitchen Style</h3></span>
-    <span>`+req.body.kitchenstyle+`</span>
-    <span><h3>Worktop Style</h3></span>
-    <span>`+req.body.worktopstyle+`</span>
-    <span><h3>Fitters Required</h3></span>
-    <span>`+req.body.fittersrequired+`</span>
-    <span><h3>Price Range</h3></span>
-    <span>`+req.body.pricerange+`</span>
-    </p></td></tr>
-   
-          </tbody></table>
-
-          <table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
-              
-          <tbody><tr>
-      </tr>
-        
-        </tbody></table></div></td></tr></tbody></table>
-        <div style="background-color: black;">
-          <table style="border: 1px solid black; text-align: center; background-color: white;  width: 100%;  max-width: 570px; -mru-width: 0px">   
-
-          <tr>
-            <td><b>Fridges</b></td>
-            <td><b>Freezers</b></td>
-            <td><b>Ovens</b></td>
-            <td><b>Hobs</b></td>
-            <td><b>Microwaves</b></td>
-          </tr>
-          <tr>
-            <td><span>`+req.body.fridges1+`</span></td>
-            <td><span>`+req.body.freezers1+`</span></td>
-            <td><span>`+req.body.ovens1+`</span></td>
-            <td><span>`+req.body.hobs1+`</span></td>
-            <td><span>`+req.body.microwaves1+`</span></td>
-          </tr>
-           <tr>
-            <td><b>Extractors</b></td>
-            <td><b>Sinks</b></td>
-            <td><b>Washing Wachine</b></td>
-            <td><b>Dryer</b></td>
-            <td><b>Wine Cooler</b></td>
-          </tr>
-          <tr>
-            <td><span>`+req.body.extractors1+`</span></td>
-            <td><span>`+req.body.sinks1+`</span></td>
-            <td><span>`+req.body.washingmachine1+`</span></td>
-            <td><span>`+req.body.dryer1+`</span></td>
-            <td><span>`+req.body.winecooler1+`</span></td>
-          </tr>
-        </table>
-          </div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-        </td></tr>
-        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_3" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
-            
-            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Thank you for completing this form. One of the team will be in touch shortly to discuss your upcoming project!&nbsp;</p></td></tr>
-          
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-        </td></tr>
-        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_2" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
-            
-            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-top: 0px;">&nbsp;To aid in transparency we have sent some information about who we are, our terms and conditions alongside some pre-fitting requirements.”</p>
-    <p style="margin: 1em 0px; margin-bottom: 0px; text-align: center;">Click the button below to Download our PDF.</p></td></tr>
-          
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-        </td></tr>
-        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_buttonBlock_1" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
-            
-            <tbody><tr>
-          <td valign="top" align="center"><table role="presentation" cellpadding="12" border="0" align="center" cellspacing="0" style="border-spacing: 0; mso-padding-alt: 12px 12px 12px 12px"><tbody><tr>
-            <td width="auto" valign="middle" align="center" bgcolor="#0c0c0c" style="text-align: center; font-weight: normal; padding: 12px; padding-left: 14px; padding-right: 14px; background-color: #0c0c0c; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif; border-radius: 15px"><a style="text-decoration: none; font-weight: normal; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif" target="_new" href="https://fandlkitchens.co.uk/FLassets/pdf/responsepack.pdf">Download</a></td>
-          </tr></tbody></table></td>
-        </tr>
-          
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-        </td></tr>
-        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_titleBlock_1" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="570" class="vb-row" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px">
-            
-            <tbody><tr>
-          <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
-            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
-              
-              <tbody><tr>
-          <td width="100%" valign="top" align="center" style="font-weight: normal; color: #3f3f3f; font-size: 22px; font-family: Arial, Helvetica, sans-serif; text-align: center"><span style="font-weight: normal">TURNING YOUR KITCHEN DREAMS INTO REALITY</span></td>
-        </tr>
-            
-            </tbody></table></div></td>
-        </tr>
-          
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-        </td></tr>
-        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_imageBlock_1" style="background-color: #000000">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-          
-          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
-            
-            <tbody><tr><td width="100%" valign="top" align="center" class="links-color"><!--[if (lte ie 8)]><div style="display: inline-block; width: 534px; -mru-width: 0px"><![endif]--><img border="0" hspace="0" align="center" vspace="0" width="534" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 534px; height: auto;" src="https://mosaico.io/srv/f-4228j1i/img?src=https%3A%2F%2Fmosaico.io%2Ffiles%2F4228j1i%2F2back.png&amp;method=resize&amp;params=534%2Cnull"><!--[if (lte ie 8)]></div><![endif]--></td></tr>
-          
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-        </td></tr>
-        </tbody></table>
-    
+    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_logoBlock_1" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" width="570" class="vb-row">
       
-        <!-- footerBlock -->
-        <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#3f3f3f" id="" style="background-color: #3f3f3f">
-          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-        <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px" width="570" class="vb-row">
-            
-          <tbody><tr>
-          <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
-            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
-              
-            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="center" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"><p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Email sent to <a href="mailto:[mail]">[mail]</a></p></td></tr>
-            <tr><td width="100%" valign="top" align="center" style="font-weight: normal; color: #ffffff; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"></td></tr>
-            <tr style="text-align: center"></tr>
-          
-            </tbody></table></div></td>
+      <tbody><tr>
+    <td align="center" valign="top" style="font-size: 0"><div style="vertical-align: top; width: 100%; max-width: 184px; -mru-width: 0px"><!--
+      -->
+      
+      
+      <table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" width="184" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px">
+        
+        <tbody><tr><td width="100%" valign="top" align="center" class="links-color"><!--[if (lte ie 8)]><div style="display: inline-block; width: 166px; -mru-width: 0px"><![endif]--><img border="0" hspace="0" align="center" vspace="0" width="166" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #f3f3f3; font-size: 18px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 166px; height: auto;" src="https://mosaico.io/srv/f-4228j1i/img?src=https%3A%2F%2Fmosaico.io%2Ffiles%2F4228j1i%2Ficon-192.png&amp;method=resize&amp;params=166%2Cnull"><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+      
+      </tbody></table></div></td>
+  </tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+    
+  </td></tr>
+  </tbody>
+
+</table>
+  
+  
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_titleBlock_2" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="570" class="vb-row" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody><tr>
+    <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
+      --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+        
+        <tbody><tr>
+    <td width="100%" valign="top" align="center" style="font-weight: normal; color: #3f3f3f; font-size: 22px; font-family: Arial, Helvetica, sans-serif; text-align: center"><span style="font-weight: normal">Your Quote Reminder</span></td>
+  </tr>
+      
+      </tbody></table></div></td>
+  </tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table>
+  
+  
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-top: 0px;">Dear `+req.body.fullname+`,</p>
+<p style="margin: 1em 0px; margin-bottom: 0px;">We wanted to let you know we got your quote. Below is a list of all the options you asked for.</p></td></tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table>
+  
+<!-- Working tag -->
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal">
+
+
+<p style="margin: 1em 0px; margin-bottom: 0px;">
+
+`+req.body.buildersname1+`
+`+req.body.buildersname2+`
+  <span><h3>Parking</h3></span>
+  <span>`+req.body.parking+`</span>
+  <span><h3>Project Type</h3></span>
+  <span>`+req.body.projecttype+`</span>
+  <span><h3>Kitchen Style</h3></span>
+  <span>`+req.body.kitchenstyle+`</span>
+  <span><h3>Worktop Style</h3></span>
+  <span>`+req.body.worktopstyle+`</span>
+  <span><h3>Fitters Required</h3></span>
+  <span>`+req.body.fittersrequired+`</span>
+  <span><h3>Price Range</h3></span>
+  <span>`+req.body.pricerange+`</span>
+
+</p></td></tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table>
+
+  <!-- Working tag end-->
+
+
+    
+<!-- Working tag -->
+<table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
+  <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+  <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+  --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+    
+    <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal">
+
+
+<p style="margin: 1em 0px; margin-bottom: 0px;">
+<h3>Appliances Required</h3>
+<table style="border: 1px solid black; text-align: center; background-color: white; width: 100%">   
+
+<tr>
+  <td>Fridges</td>
+  <td>Freezers</td>
+  <td>Ovens</td>
+  <td>Hobs</td>
+  <td>Microwaves</td>
+</tr>
+<tr>
+  <td><span>`+req.body.fridges1+`</span></td>
+  <td><span>`+req.body.freezers1+`</span></td>
+  <td><span>`+req.body.ovens1+`</span></td>
+  <td><span>`+req.body.hobs1+`</span></td>
+  <td><span>`+req.body.microwaves1+`</span></td>
+</tr>
+ <tr>
+  <td>Extractors</td>
+  <td>Sinks</td>
+  <td>Washing Wachine</td>
+  <td>Dryer</td>
+  <td>Wine Cooler</td>
+</tr>
+<tr>
+  <td><span>`+req.body.extractors1+`</span></td>
+  <td><span>`+req.body.sinks1+`</span></td>
+  <td><span>`+req.body.washingmachine1+`</span></td>
+  <td><span>`+req.body.dryer1+`</span></td>
+  <td><span>`+req.body.winecooler1+`</span></td>
+</tr>
+</table>
+
+</p></td></tr>
+  
+  </tbody></table></div><!--
+--><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+</td></tr>
+</tbody></table>
+
+<!-- Working tag end-->
+
+
+<!-- Working tag -->
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal">
+
+
+<p style="margin: 1em 0px; margin-bottom: 0px;">
+
+<span><h3>Kitchen Colour</h3></span>
+  <span>`+req.body.kitchencolour+`</span>
+  <span><h3>Time Scale</h3></span>
+  <span>`+req.body.timescale+`</span>
+  `+req.body.dontwantstatement1+`
+  `+req.body.dontwantstatement2+`
+
+</p></td></tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table>
+
+  <!-- Working tag end-->
+
+  
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_3" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Thank you for completing this form. One of the team will be in touch shortly to discuss your upcoming project!&nbsp;</p></td></tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_2" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-top: 0px;">&nbsp;To aid in transparency we have sent some information about who we are, our terms and conditions alongside some pre-fitting requirements.”</p>
+<p style="margin: 1em 0px; margin-bottom: 0px; text-align: center;">Click the button below to Download our PDF.</p></td></tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_buttonBlock_1" style="background-color: #000000">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody><tr>
+    <td valign="top" align="center"><table role="presentation" cellpadding="12" border="0" align="center" cellspacing="0" style="border-spacing: 0; mso-padding-alt: 12px 12px 12px 12px"><tbody><tr>
+      <td width="auto" valign="middle" align="center" bgcolor="#0c0c0c" style="text-align: center; font-weight: normal; padding: 12px; padding-left: 14px; padding-right: 14px; background-color: #0c0c0c; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif; border-radius: 15px"><a style="text-decoration: none; font-weight: normal; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif" target="_new" href="https://fandlkitchens.co.uk/FLassets/pdf/covidsafetypolicy.pdf">Download</a></td>
+    </tr></tbody></table></td>
+  </tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table>
+  
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_titleBlock_1" style="background-color: #000000">
+    <tbody>
+        <tr>
+            <td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="570" class="vb-row" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody>
+        <tr>
+    <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
+      --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+        
+        <tbody>
+            <tr>
+    <td width="100%" valign="top" align="center" style="font-weight: normal; color: #3f3f3f; font-size: 22px; font-family: Arial, Helvetica, sans-serif; text-align: center">
+        <span style="font-weight: normal">TURNING YOUR KITCHEN DREAMS INTO REALITY</span>
+    </td>
+  </tr>
+      
+      </tbody>
+    </table>
+</div>
+</td>
+  </tr>
+    
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table>
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_imageBlock_1" style="background-color: #000000">
+    <tbody>
+        <tr>
+            <td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+    
+    <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px">
+        <table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+      
+      <tbody>
+        <tr>
+            <td width="100%" valign="top" align="center" class="links-color"><!--[if (lte ie 8)]><div style="display: inline-block; width: 534px; -mru-width: 0px"><![endif]-->
+                <img border="0" hspace="0" align="center" vspace="0" width="534" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 534px; height: auto;" src="https://mosaico.io/srv/f-4228j1i/img?src=https%3A%2F%2Fmosaico.io%2Ffiles%2F4228j1i%2F2back.png&amp;method=resize&amp;params=534%2Cnull"><!--[if (lte ie 8)]></div><![endif]-->
+            </td>
         </tr>
+    
+    </tbody>
+</table>
+</div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+  </td></tr>
+  </tbody></table>
+
+
+  <!-- footerBlock -->
+  <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#3f3f3f" id="" style="background-color: #3f3f3f">
+    <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+  <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+    --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px" width="570" class="vb-row">
+      
+    <tbody><tr>
+    <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
+      --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
         
-          </tbody></table></div><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-      </td></tr>
-        </tbody></table>
-        <!-- /footerBlock -->
-        
-    </center><!--[if !(gte mso 16)]-->
-  <p></p>`
+      <tbody>
+      <tr><td class="long-text links-color" width="100%" valign="top" align="center" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"><p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;"><a style="a:link {color: green; background-color: transparent; text-decoration: none;} a:visited { color: pink; background-color: transparent; text-decoration: none;} a:hover {color: red; background-color: transparent; text-decoration: underline;}a:active {color: yellow; background-color: transparent;text-decoration: underline;}" href="https://www.fandlkitchens.co.uk/">F And L Kitchens</a></p></td></tr>
+      <tr style="text-align: center"><td width="100%" valign="top" align="center" class="links-color" style="text-align: center"><!--[if (lte ie 8)]><div style="display: inline-block; width: 170px; -mru-width: 0px"><![endif]--></div><![endif]--></td></tr>
+    
+      </tbody></table></div></td>
+  </tr>
+  
+    </tbody></table></div><!--
+  --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+</td></tr>
+  </tbody></table>
+  <!-- /footerBlock -->
+  
+<!--[if !(gte mso 16)]-->
+      
+      </center>`
     };
     request({
         url: "http://localhost:3000/api/quotes",
