@@ -211,6 +211,18 @@ var corsOptions = {
     {if(req.body.washingmachine === "Washing Machine Required"){fruits.push("washingmachine")}};
     {if(req.body.dryer === "Dryer Required"){fruits.push("dryer")}};
     {if(req.body.winecooler === "Wine Cooler Required"){fruits.push("winecooler")}};
+
+    {if(req.body.fridges === "Fridge Required"){req.body.fridges1 = "<span>&#10003;</span>"}else{req.body.fridges1 = "<span>&#9744;</span>"}};
+    {if(req.body.freezers === "Freezer Required"){req.body.freezers1 = "<span>&#10003;</span>"}else{req.body.freezers1 = "<span>&#9744;</span>"}};
+    {if(req.body.ovens === "Oven Required"){req.body.ovens1 = "<span>&#10003;</span>"}else{req.body.ovens1 = "<span>&#9744;</span>"}};
+    {if(req.body.hobs === "Hob Required"){req.body.hobs1 = "<span>&#10003;</span>"}else{req.body.hobs1 = "<span>&#9744;</span>"}};
+    {if(req.body.microwaves === "Microwave Required"){req.body.microwaves1 = "<span>&#10003;</span>"}else{req.body.microwaves1 = "<span>&#9744;</span>"}};
+    {if(req.body.extractors === "Extractor Required"){req.body.extractors1 = "<span>&#10003;</span>"}else{req.body.extractors1 = "<span>&#9744;</span>"}};
+    {if(req.body.sinks === "Sinks Required"){req.body.sinks1 = "<span>&#10003;</span>"}else{req.body.sinks1 = "<span>&#9744;</span>"}};
+    {if(req.body.washingmachine === "Washing Machine Required"){req.body.washingmachine1 = "<span>&#10003;</span>"}else{req.body.washingmachine1 = "<span>&#9744;</span>"}};
+    {if(req.body.dryer === "Dryer Required"){req.body.dryer1 = "<span>&#10003;</span>"}else{req.body.dryer1 = "<span>&#9744;</span>"}};
+    {if(req.body.winecooler === "Wine Cooler Required"){req.body.winecooler1 = "<span>&#10003;</span>"}else{req.body.winecooler1 = "<span>&#9744;</span>"}};
+
     let myJSONObject = {
     "fullname":req.body.fullname,
     "doornumber":req.body.doornumber,
@@ -287,15 +299,74 @@ var corsOptions = {
           </tbody></table></div><!--
         --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
         </td></tr>
-        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
+        </tbody></table>
+        <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
           <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
           <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
           --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
             
             <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-top: 0px;">Dear `+req.body.fullname+`,</p>
     <p style="margin: 1em 0px; margin-bottom: 0px;">We wanted to let you know we got your quote. Below is a list of all the options you asked for.</p></td></tr>
-          
-          </tbody></table></div><!--
+
+    <tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal">
+    <p style="margin: 1em 0px; margin-bottom: 0px;">
+    <span><h3>Builders Name</h3></span>
+    <span>`+req.body.buildersname+`</span>
+    <span><h3>Parking</h3></span>
+    <span>`+req.body.parking+`</span>
+    <span><h3>Project Type</h3></span>
+    <span>`+req.body.projecttype+`</span>
+    <span><h3>Kitchen Style</h3></span>
+    <span>`+req.body.kitchenstyle+`</span>
+    <span><h3>Worktop Style</h3></span>
+    <span>`+req.body.worktopstyle+`</span>
+    <span><h3>Fitters Required</h3></span>
+    <span>`+req.body.fittersrequired+`</span>
+    <span><h3>Price Range</h3></span>
+    <span>`+req.body.pricerange+`</span>
+    </p></td></tr>
+   
+          </tbody></table>
+
+          <table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+              
+          <tbody><tr>
+      </tr>
+        
+        </tbody></table></div></td></tr></tbody></table>
+        <div style="background-color: black;">
+          <table style="border: 1px solid black; text-align: center; background-color: white;  width: 100%;  max-width: 570px; -mru-width: 0px">   
+
+          <tr>
+            <td><b>Fridges</b></td>
+            <td><b>Freezers</b></td>
+            <td><b>Ovens</b></td>
+            <td><b>Hobs</b></td>
+            <td><b>Microwaves</b></td>
+          </tr>
+          <tr>
+            <td><span>`+req.body.fridges1+`</span></td>
+            <td><span>`+req.body.freezers1+`</span></td>
+            <td><span>`+req.body.ovens1+`</span></td>
+            <td><span>`+req.body.hobs1+`</span></td>
+            <td><span>`+req.body.microwaves1+`</span></td>
+          </tr>
+           <tr>
+            <td><b>Extractors</b></td>
+            <td><b>Sinks</b></td>
+            <td><b>Washing Wachine</b></td>
+            <td><b>Dryer</b></td>
+            <td><b>Wine Cooler</b></td>
+          </tr>
+          <tr>
+            <td><span>`+req.body.extractors1+`</span></td>
+            <td><span>`+req.body.sinks1+`</span></td>
+            <td><span>`+req.body.washingmachine1+`</span></td>
+            <td><span>`+req.body.dryer1+`</span></td>
+            <td><span>`+req.body.winecooler1+`</span></td>
+          </tr>
+        </table>
+          </div><!--
         --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
         </td></tr>
         </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_3" style="background-color: #000000">
@@ -326,7 +397,7 @@ var corsOptions = {
             
             <tbody><tr>
           <td valign="top" align="center"><table role="presentation" cellpadding="12" border="0" align="center" cellspacing="0" style="border-spacing: 0; mso-padding-alt: 12px 12px 12px 12px"><tbody><tr>
-            <td width="auto" valign="middle" align="center" bgcolor="#0c0c0c" style="text-align: center; font-weight: normal; padding: 12px; padding-left: 14px; padding-right: 14px; background-color: #0c0c0c; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif; border-radius: 15px"><a style="text-decoration: none; font-weight: normal; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif" target="_new" href="https://fandlkitchens.co.uk/FLassets/pdf/covidsafetypolicy.pdf">Download</a></td>
+            <td width="auto" valign="middle" align="center" bgcolor="#0c0c0c" style="text-align: center; font-weight: normal; padding: 12px; padding-left: 14px; padding-right: 14px; background-color: #0c0c0c; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif; border-radius: 15px"><a style="text-decoration: none; font-weight: normal; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif" target="_new" href="https://fandlkitchens.co.uk/FLassets/pdf/responsepack.pdf">Download</a></td>
           </tr></tbody></table></td>
         </tr>
           
@@ -377,8 +448,8 @@ var corsOptions = {
             --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
               
             <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="center" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"><p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Email sent to <a href="mailto:[mail]">[mail]</a></p></td></tr>
-            <tr><td width="100%" valign="top" align="center" style="font-weight: normal; color: #ffffff; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"><a href="[unsubscribe_link]" style="color: #ffffff; text-decoration: underline" target="_new">Unsubscribe</a></td></tr>
-            <tr style="text-align: center"><td width="100%" valign="top" align="center" class="links-color" style="text-align: center"><!--[if (lte ie 8)]><div style="display: inline-block; width: 170px; -mru-width: 0px"><![endif]--><a style="display: inline-block" target="_new" href="https://mosaico.io/?footerbadge"><img alt="MOSAICO Responsive Email Designer" border="0" hspace="0" align="center" vspace="0" width="170" src="https://mosaico.io/img/mosaico-badge.gif" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 170px;"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+            <tr><td width="100%" valign="top" align="center" style="font-weight: normal; color: #ffffff; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"></td></tr>
+            <tr style="text-align: center"></tr>
           
             </tbody></table></div></td>
         </tr>
