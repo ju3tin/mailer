@@ -246,188 +246,150 @@ var corsOptions = {
       to: toEmail,
       subject: emailSubject,
       //html: '<p>Message from <strong>' + fromName + ' (' + fromEmail + ')</strong></p><p>' + message + '</p>'
-      html: `<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; margin-top: 30px; padding: 0; width: 100%;" class="background"><tr><td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; padding: 0;"
-      bgcolor="#D5E2EC">
-  
-  <!-- WRAPPER -->
-  <!-- Set wrapper width (twice) -->
-  <table border="0" cellpadding="0" cellspacing="0" align="center"
-      width="700" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: inherit;
-      max-width: 700px;" class="wrapper">
-  
-      <tr>
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%;
-              padding-top: 20px;
-              padding-bottom: 20px;">
-              
-              <!-- LOGO -->
-              <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2. URL format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content=logo&utm_campaign={{Campaign-Name}} -->
-              <a target="_blank" style="text-decoration: none;"
-                  href="https://www.fandlkitchens.co.uk/"><img border="0" vspace="0" hspace="0"
-                  src="https://ju3tin.github.io/images/logoedit.png"
-                  width="100" height="100"
-                  alt="Logo" title="Logo" style="
-                  color: #303344;
-                  font-size: 10px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; " /></a>
-  
-          </td>
-      </tr>
-  
-  <!-- End of WRAPPER -->
-  </table>
-  
-  <!-- WRAPPER / CONTEINER -->
-  <!-- Set conteiner background color -->
-  <table border="0" cellpadding="0" cellspacing="0" align="center"
-      bgcolor="#FFFFFF"
-      width="700" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: inherit; 
-      max-width: 700px;" class="container">
-  
-      <!-- HEADER -->
-      <!-- Set text color and font family ("sans-serif" or "Georgia, serif") -->
-      <tr>
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 8%; padding-right: 8%; width: 87.5%; font-size: 36px; font-weight: bold; line-height: 130%;
-              text-align: left;
-              padding-top: 70px;
-              color: #303344;
-              font-family: 'Arial', sans-serif;" class="header">
-                  Your Quote Reminder
-          </td>
-      </tr>
-      <!-- PARAGRAPH -->
-      <!-- Set text color and font family ("sans-serif" or "Georgia, serif"). Duplicate all text styles in links, including line-height -->
-      <tr>
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 8%; padding-right: 8%; width: 87.5%; font-size: 18px; font-weight: 400; line-height: 160%; text-align: left;
-              padding-top: 30px; 
-              color: #525c6c;
-              font-family: 'Arial', sans-serif;" class="paragraph">
-                  Dear `+req.body.fullname+`,
-              <br><br>
-                  We wanted to let you know we got your quote. Below is a list of all the varibles you asked for. 
-          </td>
-      </tr>
-  
-      <!-- LINE -->
-      <!-- Set line color -->
-      <tr>	
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 8%; padding-right: 8%; width: 87.5%;
-              padding-top: 50px;" class="line">
-          </td>
-      </tr>	
-      <!-- LIST -->
-      <tr>
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 8%; padding-right: 8%;" class="list-item"><table align="center" border="0" cellspacing="0" cellpadding="0" style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; border-spacing: 0;">
-              <tr td align="left" valign="top" style="font-size: 13px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
-                      text-align: left;
-                      padding-top: 30px;
-                      color: #7d8d9e;
-                      text-transform: uppercase;
-                      font-family: 'Arial', sans-serif;;" class="paragraph">
-                  <th scope="col" style="padding-bottom: 10px;">Varible Title</th>
-                  <th scope="col" style="padding-bottom: 10px;">Varible Name</th>
-              </tr>
-              
-              <!-- LIST ITEM -->
-              <tr align="left" valign="top" style="font-size: 18px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
-                      text-align: left;
-                      padding-top: 30px;
-                      color: #303344;
-                      font-family: 'Arial', sans-serif;;" class="paragraph">
-                  <!-- LIST ITEM TEXT -->
-                  <td style="padding: 20px 0 10px;">Bob's Burgers</td>
-                  <td style="padding: 20px 0 10px;">10/29/2018</td>
+      html: `<center>
 
-              </tr>
-              <!-- LIST ITEM -->
-              <tr align="left" valign="top" style="font-size: 18px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
-              text-align: left;
-              padding-top: 30px;
-              color: #303344;
-              font-family: 'Arial', sans-serif;;" class="paragraph">
-              <!-- LIST ITEM TEXT -->
-              <td style="padding: 20px 0 10px;">`+req.body.email+`</td>
-              <td style="padding: 20px 0 10px;">10/29/2018</td>
-              </tr>
+  
 
-              <tr align="left" valign="top" style="font-size: 18px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
-                      text-align: left;
-                      padding-top: 30px;
-                      color: #303344;
-                      font-family: 'Arial', sans-serif;;" class="paragraph">
-                  <!-- LIST ITEM TEXT -->
-                  <td style="padding: 20px 0 10px;">Bob's Burgers</td>
-                  <td style="padding: 20px 0 10px;">10/29/2018</td>
-              </tr>
-              <!-- LIST ITEM -->
-              <tr align="left" valign="top" style="font-size: 18px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
-                      text-align: left;
-                      padding-top: 30px;
-                      color: #303344;
-                      font-family: 'Arial', sans-serif;;" class="paragraph">
-                  <!-- LIST ITEM TEXT -->
-                  <td style="padding: 20px 0 10px;">Bob's Burgers</td>
-                  <td style="padding: 20px 0 10px;">10/29/2018</td>
-                  <td align="right" style="padding: 20px 0 10px;">$2,108</td>
-                 <!-- <td align="right" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 10px; width: auto;" class="button"><a
-              href="{{quote_link}}" target="_blank" style="text-decoration: none;">
-                  <table border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse: collapse; border-spacing: 0; padding: 0;"><tr><td align="center" valign="middle" style="padding: 8px 15px; margin: 0; text-decoration: none; border-collapse: collapse; border-spacing: 0; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -khtml-border-radius: 2px;"
-                      bgcolor=""><a target="_blank" style="text-decoration: none;
-                      color: #4579FF; font-family: 'Arial', sans-serif; font-size: 16px; font-weight: 600; line-height: 120%;"
-                      href="https://app.attuneinsurance.com">
-                      View quote
-                      </a>
-              </td></tr></table></a>
-          </td>-->
-              </tr>
-  
-          </table></td>
-      </tr>
-          <!-- BUTTON -->
-      <!-- Set button background color at TD, link/text color at A and TD, font family ("sans-serif" or "Georgia, serif") at TD. For verification codes add "letter-spacing: 5px;". Link format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content={{Button-Name}}&utm_campaign={{Campaign-Name}} -->
-  <!-- 	<tr>
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 8%; padding-right: 8%; width: 87.5%;
-              padding-top: 50px;
-              padding-bottom: 5px;" class="button"><a
-              href="https://github.com/konsav/email-templates/" target="_blank" style="text-decoration: none;">
-                  <table border="0" cellpadding="0" cellspacing="0" align="center" style="width: 100%; border-collapse: collapse; border-spacing: 0; padding: 0;"><tr><td align="center" valign="middle" style="padding: 18px 24px; margin: 0; text-decoration: none; border-collapse: collapse; border-spacing: 0; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -khtml-border-radius: 2px;"
-                      bgcolor="#4579FF"><a target="_blank" style="text-decoration: none;
-                      color: #FFFFFF; font-family: 'Arial', sans-serif; font-size: 18px; font-weight: 600; line-height: 120%;"
-                      href="https://www.fandlkitchens.co.uk/">
-                      Review quotes
-                      </a>
-              </td></tr></table></a>
-          </td>
-      </tr> -->
-  
-      <!-- PARAGRAPH -->
-      <!-- Set text color and font family ("sans-serif" or "Georgia, serif"). Duplicate all text styles in links, including line-height -->
-      <tr>
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 16px; font-weight: 400; line-height: 160%;
-              padding-top: 30px;
-              padding-bottom: 15px;
-              color: #525c6c;
-              font-family: 'Arial', sans-serif;" class="paragraph">
-                  Questions? <a href="mailto:Info@fandlsupplies.co.uk" target="_blank" style="color: #4579FF; font-family: 'Arial', sans-serif; font-size: 16px; font-weight: 400; line-height: 160%;">Info@fandlsupplies.co.uk</a> | 447780116170
-          </td>
-      </tr>
-      <tr>
-          <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 16px; font-weight: 400; line-height: 160%;
-              padding-top: 0px;
-              padding-bottom: 30px;
-              color: #7d8d9e;
-              font-family: 'Arial', sans-serif;" class="paragraph">© F&L Kitchens Ltd. 2023</td>
-      </tr>
+      <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_logoBlock_1" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" width="570" class="vb-row">
+            
+            <tbody><tr>
+          <td align="center" valign="top" style="font-size: 0"><div style="vertical-align: top; width: 100%; max-width: 184px; -mru-width: 0px"><!--
+            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" width="184" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px">
+              
+              <tbody><tr><td width="100%" valign="top" align="center" class="links-color"><!--[if (lte ie 8)]><div style="display: inline-block; width: 166px; -mru-width: 0px"><![endif]--><img border="0" hspace="0" align="center" vspace="0" width="166" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #f3f3f3; font-size: 18px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 166px; height: auto;" src="https://mosaico.io/srv/f-4228j1i/img?src=https%3A%2F%2Fmosaico.io%2Ffiles%2F4228j1i%2Ficon-192.png&amp;method=resize&amp;params=166%2Cnull"><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+            
+            </tbody></table></div></td>
+        </tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+          
+        </td></tr>
+        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_titleBlock_2" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="570" class="vb-row" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px">
+            
+            <tbody><tr>
+          <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
+            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+              
+              <tbody><tr>
+          <td width="100%" valign="top" align="center" style="font-weight: normal; color: #3f3f3f; font-size: 22px; font-family: Arial, Helvetica, sans-serif; text-align: center"><span style="font-weight: normal">Your Quote Reminder</span></td>
+        </tr>
+            
+            </tbody></table></div></td>
+        </tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+        </td></tr>
+        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_1" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+            
+            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-top: 0px;">Dear `+req.body.fullname+`,</p>
+    <p style="margin: 1em 0px; margin-bottom: 0px;">We wanted to let you know we got your quote. Below is a list of all the options you asked for.</p></td></tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+        </td></tr>
+        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_3" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+            
+            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Thank you for completing this form. One of the team will be in touch shortly to discuss your upcoming project!&nbsp;</p></td></tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+        </td></tr>
+        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_textBlock_2" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+            
+            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="left" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal"><p style="margin: 1em 0px; margin-top: 0px;">&nbsp;To aid in transparency we have sent some information about who we are, our terms and conditions alongside some pre-fitting requirements.”</p>
+    <p style="margin: 1em 0px; margin-bottom: 0px; text-align: center;">Click the button below to Download our PDF.</p></td></tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+        </td></tr>
+        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_buttonBlock_1" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+            
+            <tbody><tr>
+          <td valign="top" align="center"><table role="presentation" cellpadding="12" border="0" align="center" cellspacing="0" style="border-spacing: 0; mso-padding-alt: 12px 12px 12px 12px"><tbody><tr>
+            <td width="auto" valign="middle" align="center" bgcolor="#0c0c0c" style="text-align: center; font-weight: normal; padding: 12px; padding-left: 14px; padding-right: 14px; background-color: #0c0c0c; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif; border-radius: 15px"><a style="text-decoration: none; font-weight: normal; color: #ffc000; font-size: 20px; font-family: Arial, Helvetica, sans-serif" target="_new" href="https://fandlkitchens.co.uk/FLassets/pdf/covidsafetypolicy.pdf">Download</a></td>
+          </tr></tbody></table></td>
+        </tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+        </td></tr>
+        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_titleBlock_1" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="570" class="vb-row" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px">
+            
+            <tbody><tr>
+          <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
+            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+              
+              <tbody><tr>
+          <td width="100%" valign="top" align="center" style="font-weight: normal; color: #3f3f3f; font-size: 22px; font-family: Arial, Helvetica, sans-serif; text-align: center"><span style="font-weight: normal">TURNING YOUR KITCHEN DREAMS INTO REALITY</span></td>
+        </tr>
+            
+            </tbody></table></div></td>
+        </tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+        </td></tr>
+        </tbody></table><table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#000000" id="ko_imageBlock_1" style="background-color: #000000">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+          
+          <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" bgcolor="#ffffff" width="570" class="vb-container" style="border-collapse: separate; width: 100%; background-color: #ffffff; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px">
+            
+            <tbody><tr><td width="100%" valign="top" align="center" class="links-color"><!--[if (lte ie 8)]><div style="display: inline-block; width: 534px; -mru-width: 0px"><![endif]--><img border="0" hspace="0" align="center" vspace="0" width="534" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 534px; height: auto;" src="https://mosaico.io/srv/f-4228j1i/img?src=https%3A%2F%2Fmosaico.io%2Ffiles%2F4228j1i%2F2back.png&amp;method=resize&amp;params=534%2Cnull"><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+          
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+        </td></tr>
+        </tbody></table>
+    
       
-  
-  <!-- End of WRAPPER -->
-  </table>
-  
-  <!-- WRAPPER -->
-  <!-- Set wrapper width (twice) -->
-
-  
-  <!-- End of SECTION / BACKGROUND -->
-  </td></tr></table>
+        <!-- footerBlock -->
+        <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#3f3f3f" id="" style="background-color: #3f3f3f">
+          <tbody><tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+        <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+          --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px" width="570" class="vb-row">
+            
+          <tbody><tr>
+          <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align: top; width: 100%; max-width: 552px; -mru-width: 0px"><!--
+            --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+              
+            <tbody><tr><td class="long-text links-color" width="100%" valign="top" align="center" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"><p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Email sent to <a href="mailto:[mail]">[mail]</a></p></td></tr>
+            <tr><td width="100%" valign="top" align="center" style="font-weight: normal; color: #ffffff; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center"><a href="[unsubscribe_link]" style="color: #ffffff; text-decoration: underline" target="_new">Unsubscribe</a></td></tr>
+            <tr style="text-align: center"><td width="100%" valign="top" align="center" class="links-color" style="text-align: center"><!--[if (lte ie 8)]><div style="display: inline-block; width: 170px; -mru-width: 0px"><![endif]--><a style="display: inline-block" target="_new" href="https://mosaico.io/?footerbadge"><img alt="MOSAICO Responsive Email Designer" border="0" hspace="0" align="center" vspace="0" width="170" src="https://mosaico.io/img/mosaico-badge.gif" style="border: 0px; display: block; vertical-align: top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; width: 100%; max-width: 170px;"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+          
+            </tbody></table></div></td>
+        </tr>
+        
+          </tbody></table></div><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+      </td></tr>
+        </tbody></table>
+        <!-- /footerBlock -->
+        
+    </center><!--[if !(gte mso 16)]-->
   <p></p>`
     };
     request({
