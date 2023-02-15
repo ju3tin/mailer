@@ -12,7 +12,7 @@ const dbConnect = require("./db/dbConnect");
 // execute database connection 
 dbConnect();
 
-const allowedOrigin = ["https://adafycheng.github.io","http://localhost:5000","*"];
+const allowedOrigin = ["*"];
 const emailUser = 'fandlkitchens@gmail.com';
 const password = 'owvozapcjtqwfzdw';
 
